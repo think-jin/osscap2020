@@ -9,7 +9,7 @@ from matrix import *
 import LED_display as LMD
 import threading
 import cv2
-from sample_recognition import face_recognition
+from recognition import face_recognition
 
 def LED_init():
     thread=threading.Thread(target=LMD.main, args=())
@@ -213,7 +213,7 @@ def Alarm():
         for num in lst:
             arrayBlk = arrayNumDict[num]
             updateScreen(arrayBlk, top, left)
-            left+=4
+            left += 4
     else:
         left = 25
         for num in str(aminute):
